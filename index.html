@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/mystyles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <title>Countdown.io</title>
+</head>
+<body>
+  <div class="hero">
+    <div class="top-left">
+      <div class="margin-between">
+        <div id="bg-edit-trigger" class="button is-text has-text-white is-rounded">
+          <span class="icon">
+            <i class="fas fa-camera"></i>
+          </span>
+          <span>Change Image</span>
+        </div>
+      </div>
+      <div id="bg-edit-field" class="margin-between is-invisible">
+        <div>
+          <div class="field has-addons">
+            <div class="control">
+              <input id="bg-url" class="input is-rounded" type="text" placeholder="Paste Web URL">
+            </div>
+            <div class="control">
+              <a id="bg-submit-url" class="button is-rounded is-outlined is-primary">
+                Go
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="notification-area" class="container bottom will-move">
+      <div class="notification"></div>
+    </div>
+    <div class="container">
+      <div class="countdown-area">
+        <div class="timer">
+          <div class="timer-box">
+            <p id="years" class="title"></p>
+            <p class="timer-label">Years</p>
+          </div>
+          <div class="timer-box">
+            <p id="days" class="title"></p>
+            <p class="timer-label">Days</p>
+          </div>
+          <div class="timer-box">
+            <p id="hours"class="title"></p>
+            <p class="timer-label">Hours</p>
+          </div>
+          <div class="timer-box">
+            <p id="minutes"class="title"></p>
+            <p class="timer-label">Minutes</p>
+          </div>
+          <div class="timer-box">
+            <p id="seconds"class="title"></p>
+            <p class="timer-label">Seconds</p>
+          </div>
+        </div>
+        <div class="info-area">
+          <p class="flourish subtitle">until</p>
+          <span id="event-display" class="flourish has-text-primary underlined subtitle"></span>
+        </div>
+        <div class="selection-area">
+          <div id="modal-trigger" class="button is-medium is-primary">Set Timer</div>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <div id="modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <div class="box">
+            <h2 class="title is-size-3 has-text-centered">Timer Setup</h2>
+            <form>
+              <div class="field">
+                <div class="label">Countdown To Event</div>
+                <div class="control">
+                  <input id="event-input" type="text" class="input" placeholder="e.g. New Years">
+                </div>
+              </div>
+              <div class="field">
+                <div class="label">Input Date</div>
+                <div class="control">
+                  <input id="date-input" type="text" class="input" placeholder="01/01/2021">
+                  <p id="date-validate" class="help"></p>
+                </div>
+              </div>
+              <button id="set-timer" class="button is-primary is-fullwidth">Set It!</button>
+            </form>
+          </div>
+        </div>
+        <div id="modal-close" class="modal-close"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
